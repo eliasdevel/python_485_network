@@ -26,6 +26,7 @@ while True:
         slices = line.split('|');
         
         if(len(slices) > 1):
+            print(slices)
             item['valor_atual'] = slices[1]
             collection.update({'_id':item['_id']},item,True)
         print(line);
