@@ -13,6 +13,9 @@ collection = db.sensors
 
 
 ser = serial.Serial('/dev/ttyUSB0',9600,timeout=4);
+ser.write("AA|2\n");
+time.sleep(2);
+
 
 while True:
     #percorre dados da collection
