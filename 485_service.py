@@ -7,7 +7,7 @@ from serial import Serial
 
 client = MongoClient('localhost', 27017)
 
-db = client.test_database
+db = client.sensors_database
 
 collection = db.sensors
 
@@ -29,7 +29,7 @@ while True:
         if(len(slices) > 1):
             print(slices)
             item['valor_atual'] = slices[1]
-            collection.update({'_id':item['_id']},item,True)
+            collection.update({'_id':item['_id']}, {'$set': {'valor_atual':slices[1]}},True)
         print(line);
 
 
