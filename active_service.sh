@@ -13,4 +13,4 @@ echo "WantedBy=multi-user.target" >> /etc/systemd/system/485_temperature.service
 
 sudo systemctl enable 485_temperature.service
 
-sudo systemctl status dummy.service
+sudo systemctl status 485_temperature.service
