@@ -10,3 +10,7 @@ echo "ExecStart=/home/pi/python_485_network/run.py\n" >> /etc/systemd/system/485
 echo "Restart=always\n" >> /etc/systemd/system/485_temperature.service
 echo "[Install]" >> /etc/systemd/system/485_temperature.service
 echo "WantedBy=multi-user.target" >> /etc/systemd/system/485_temperature.service
+
+sudo systemctl enable 485_temperature.service
+
+sudo systemctl status dummy.service
